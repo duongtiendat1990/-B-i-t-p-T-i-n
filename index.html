@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dictionary</title>
+</head>
+<body>
+<div class="upload-wrapper">
+    <h1>Choose English Dictionary</h1><br>
+    <header>
+        <input type="file" id="chooseEnglish" onchange="chooseEnglishDictionary()">
+    </header>
+</div>
+<div class="upload-wrapper">
+    <h1>Choose Vietnamese Dictionary</h1><br>
+    <header>
+        <input type="file" id="chooseVietnamese" onchange="chooseVietnameseDictionary()">
+    </header>
+</div>
+<div>
+    <input type="text" id="englishWord" readonly><button onclick="lookupVietnameseMeaning();" style="width: 220px">Lookup Vietnamese Meaning</button>
+</div>
+<div>
+    <input type="text" id="vietnameseWord" readonly><button onclick="lookupEnglishMeaning();" style="width: 220px">Lookup Engling Meaning</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
