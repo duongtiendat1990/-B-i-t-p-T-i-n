@@ -5,7 +5,7 @@ if (window.File && window.FileReader && window.FileList && window.Blob) {
         var file = document.querySelector('#chooseEnglish').files[0];
         var reader = new FileReader();
         var textFile = /text.*/;
-        let str;
+        var str;
         if (file.type.match(textFile)) {
             reader.onload = function (event) {
                 str = event.target.result;
@@ -21,7 +21,7 @@ if (window.File && window.FileReader && window.FileList && window.Blob) {
         var file = document.querySelector('#chooseVietnamese').files[0];
         var reader = new FileReader();
         var textFile = /text.*/;
-        let str;
+        var str;
         if (file.type.match(textFile)) {
             reader.onload = function (event) {
                 str = event.target.result;
@@ -38,9 +38,7 @@ if (window.File && window.FileReader && window.FileList && window.Blob) {
         document.getElementById('englishWord').value = englishWord;
         let result;
         let sign = false;
-        console.log(englishDictionary)
         for (let i=0;i<englishDictionary.length;i++) {
-            let word = englishDictionary[i];
             if (englishWord === englishDictionary[i] ) {
                 result = vietnameseDictionary[i];
                 sign = true;
@@ -55,7 +53,7 @@ if (window.File && window.FileReader && window.FileList && window.Blob) {
         let result;
         let sign = false;
         for (let i=0;i<vietnameseDictionary.length;i++) {
-            if (vietnameseWord == vietnameseDictionary[i]) {
+            if (vietnameseWord === vietnameseDictionary[i]) {
                 result = englishDictionary[i];
                 sign = true;
             }
